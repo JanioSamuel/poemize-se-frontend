@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #b3d9ff;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, input, button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.poetry-list p {
+  text-decoration: none;
+}
+
+.dec-none {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+}
+
+.content {
+  width: 300px;
+  background: #FFF;
+  margin-top: 2px;
+  margin: 2px;
+  border-radius: 4px;
+  padding: 5px;
+  align-items: center;
+  display: inline-table;
+  align-self: center;
+  
+}
+
+ul.poetry-list {
+  border: 0;
+  width: 100%;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.content:hover {
+  background: none;
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.content:hover:before, .content:hover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.content:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
   }
-  to {
-    transform: rotate(360deg);
+  12% {
+    top: -2px;
+    left: 2px;
   }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+
+ul.poetry-list p {
+  align-self: center;
+}
+
+
+ul.poetry-list span {
+  margin-top: 5px;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+ul.poetry-list strong {
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.btn {
+  border: 2px solid lightgrey;
+	background-color: #568;
+	font-size: 16px;
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 999px;
+  font-size: 22px;
+  position: absolute;
+  left: 90%;
+  top: 80%;
+  z-index: 1;
 }
