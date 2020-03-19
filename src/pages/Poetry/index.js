@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
+import './styles.css';
+
 export default function Poetry(props) {
   const [poetry, setPoetry] = useState([]);
   const values = props.match.params;
@@ -20,9 +22,17 @@ export default function Poetry(props) {
   
   return (
     <>
-      <h1>Title: {poetry.title}</h1>
-      <h2>Poetry: {poetry.poetry}</h2>
-      <h3>Author: {poetry.author}</h3>
+      <div className="container-poetry">
+        <div className="title">
+          <h1>{poetry.title}</h1>
+        </div>
+        <div className="poetry">
+          <pre>{poetry.poetry}</pre>
+        </div>
+        <div className="author">
+          <h3>{poetry.author}</h3>
+        </div>
+      </div>
     </>
   )
 }

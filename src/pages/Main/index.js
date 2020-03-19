@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
-import '../../App.css';
+import './styles.css';
 
 export default function Main() {
   const [poetrys, setPoetrys] = useState([]);

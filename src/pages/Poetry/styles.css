@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.container-poetry {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.title {
+  margin-top: 50px;
+}
+
+.poetry {
+  background-color: ivory;
+  margin-top: 50px;
+  max-width: 800px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: flex-start;
+  white-space: pre-wrap;
+}
+
+.poetry pre {
+  margin-left: 10px;
+  align-items: center;
+  margin-right: 10px;
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.author {
+  margin-top: 30px;
+}
